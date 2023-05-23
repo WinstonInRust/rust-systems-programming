@@ -1,3 +1,13 @@
+use std::env;
+use std::str::FromStr;
+fn main() {
+    let mut numbers = Vec::new();
+
+    for arg in env::args().skip(1) {
+        numbers.push(u64::from_str(&arg).expect("error parsing element"));
+    }
+}
+
 fn gcd(mut n: u64, mut m: u64) -> u64 {
     assert!(n != 0 && m != 0);
     while m != 0 {
@@ -9,9 +19,6 @@ fn gcd(mut n: u64, mut m: u64) -> u64 {
         m = m % n;
     }
     n
-}
-fn main() {
-    println!("{}", gcd(37, 15));
 }
 
 #[test]
