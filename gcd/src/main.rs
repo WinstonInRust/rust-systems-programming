@@ -11,6 +11,11 @@ fn main() {
         eprintln!("Usage : gcd NUMBER...");
         std::process::exit(1);
     }
+
+    let mut d = numbers[0];
+    for m in &numbers[1..] {
+        d = gcd(d, *m);
+    }
 }
 
 fn gcd(mut n: u64, mut m: u64) -> u64 {
