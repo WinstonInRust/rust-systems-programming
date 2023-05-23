@@ -11,7 +11,7 @@ fn gcd(mut n: u64, mut m: u64) -> u64 {
     n
 }
 fn main() {
-    println!("{}", gcd(34, 15));
+    println!("{}", gcd(37, 15));
 }
 
 #[test]
