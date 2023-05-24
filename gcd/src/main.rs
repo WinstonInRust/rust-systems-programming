@@ -1,3 +1,4 @@
+//Program for computing the greatest common divisor.
 use std::env;
 use std::str::FromStr;
 fn main() {
